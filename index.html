@@ -10,6 +10,7 @@ body {
   margin-top: 10vh;
   background-color: black;
   color: white;
+  x-background-image: url("navigators.jpg");
 }
 a {
   color: gray !important;
@@ -17,6 +18,10 @@ a {
 #mapdiv {
   margin: 8vh 0;
   height: 50vh;
+}
+.bigimg {
+  margin: .5em 0;
+  width: 95vw;
 }
 </style>
 <script type='module'>
@@ -67,11 +72,12 @@ window.onload = async () => {
 </head>
 <body>
 <h1>CyberValley, Japan</h1>
-<div>next 2020-12-11 14:00-15:00 at <a href="https://tannan.fm/">tannan.fm 79.1MHz or net</a></div>
+<div>next 2020-12-11 14:00-15:00 at <a href="http://tannan.fm/">tannan.fm 79.1MHz or net</a></div>
 <div>2020-12-04 started!</div>
 
-<div id="mapdiv">
-</div>
+<div id="mapdiv"></div>
+
+<img class=bigimg src="navigators.jpg">
 
 </body>
 <html>
