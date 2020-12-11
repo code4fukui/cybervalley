@@ -7,16 +7,27 @@
 body {
   font-family: 'Comfortaa', cursive;
   text-align: center;
-  margin-top: 10vh;
+  x-margin-top: 10vh;
+  margin: 0;
+  padding: 0;
   background-color: black;
   color: white;
-  x-background-image: url("navigators.jpg");
 }
 a {
   color: gray !important;
 }
+h1 {
+  background-image: url("navigators.jpg");
+  background-size: 100% auto;
+  font-size: 8vw;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 2em 0;
+  margin: 0 0 2vh 0;
+  text-align: center;
+}
 #mapdiv {
-  margin: 8vh 0;
+  margin: 2vh 0;
   height: 50vh;
 }
 .bigimg {
@@ -24,51 +35,8 @@ a {
   width: 95vw;
 }
 </style>
-<script type='module'>
-import L from 'https://code4sabae.github.io/leaflet-mjs/leaflet.mjs'
+<script type="module" src="cybervalley-map.js"></script>
 
-window.onload = async () => {
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = "https://code4sabae.github.io/leaflet-mjs/leaflet.css";
-  document.head.appendChild(link);
-  
-  const data = [
-    { lat: 36.065006, lng: 136.221746, name: "福井県庁", link: "https://www.pref.fukui.lg.jp/index3.html" },
-    // { lat: 35.943560, lng: 136.188917, name: '鯖江駅' },
-    { lat: 36.077170, lng: 136.215853, name: "サイエンスカフェ", link: "http://tannan.fm/contents/science-cafe.html" },
-    { lat: 35.944539, lng: 136.186222, name: 'Hana道場', link: "https://hanadojo.com" },
-    { lat: 35.942795, lng: 136.198881, name: 'さばえSDGs推進センター', link: "https://www.sabae-sdgs.jp/" },
-    // { lat: 35.949658, lng: 136.258142, name: 'JAPAN CRAFT HOUSE' },
-    { lat: 35.946878, lng: 136.183446, name: "SCC", link: "https://sabae.cc/" },
-    { lat: 35.946201, lng: 136.185211, name: "tannan.fm", link: "http://tannan.fm/" },
-  ];
-
-  const map = L.map('mapdiv')
-  // set 国土地理院地図 https://maps.gsi.go.jp/development/ichiran.html
-  // const mapurl = "https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png";
-  const mapurl = "https://maps.gsi.go.jp/xyz/d1-no898/{z}/{x}/{y}.png";
-  L.tileLayer(mapurl, {
-    attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html">国土地理院</a>"',
-  }).addTo(map);
-
-  let iconlayer = L.layerGroup();
-  iconlayer.addTo(map);
-  const lls = [];
-  for (const item of data) {
-    const ll = [ item.lat, item.lng ];
-    const marker = L.marker(ll); // , { title: `<a href=${item.name}>t</a>` });
-    marker.bindPopup(`<a href=${item.link}>${item.name}</a>`);
-    iconlayer.addLayer(marker);
-    lls.push(ll);
-  }
-  if (lls.length) {
-    map.fitBounds(lls);
-  }
-  map.setZoom(10);
-}
-
-</script>
 </head>
 <body>
 <h1>CyberValley, Japan</h1>
@@ -76,8 +44,6 @@ window.onload = async () => {
 <div>2020-12-04 started!</div>
 
 <div id="mapdiv"></div>
-
-<img class=bigimg src="navigators.jpg">
 
 </body>
 <html>
