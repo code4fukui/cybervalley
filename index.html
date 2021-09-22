@@ -1,67 +1,189 @@
-<!DOCTYPE html><html><head><meta charset="utf-8">
-<title>CyberValley, Japan</title>
-<head>
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>CyberFriday - CyberValley, Japan</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/stats.js"></script>
+<script src="js/script.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&display=swap" rel="stylesheet">
+ 
 <style>
 body {
-  font-family: 'Comfortaa', cursive;
   text-align: center;
-  x-margin-top: 10vh;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   background-color: black;
+}
+canvas {
+  x-position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+:root {
+  /* Set neon color */
+  --neon-text-color: #480;
+}
+.cyber {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 200;
+  font-style: italic;
+  color: #fff;
+  overflow: hidden;
+  padding: 4rem 6rem 5.5rem;
+  x-border: 0.4rem solid #fff;
+  x-border-radius: 2rem;
+  x-text-transform: uppercase;
+  x-animation: flicker 1.5s infinite alternate;     
+
+  text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-text-color),
+            0 0 10rem var(--neon-text-color);
+
+}
+.text {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 90vw;
+}
+#text1, #text2, #text3, #text4 {
+  user-select: none;
+}
+#text1, #text2 {
+  position: absolute;
+  font-size: 20vw;
+  white-space: nowap;
+  transform: rotateZ(-30deg);
+}
+
+#text1 {
+  top: 14vw;
+  left: -7vw;
+}
+#text2 {
+  top: 23vw;
+  left: 21vw;
+}
+@media (max-width:480px) {
+  #text1 {
+    top: 14vw;
+    left: -21vw;
+  }
+  #text2 {
+    top: 23vw;
+    left: 7vw;
+  }
+}
+#text3, #text4 {
+  position: absolute;
+  text-align: left;
+  font-size: 3vw;
+  white-space: nowap;
+  overflow: hidden;
+}
+#text3 {
+  top: 60vw;
+  right: -3vw;
+}
+#text4 {
+  top: 64vw;
+  right: -3vw;
+}
+main {
+  display: block;
+  position: absolute;
+  font-size: 80%;
+  width: 100vw;
+  top: 85vw;
   color: white;
+  padding-bottom: 3em;
 }
 a {
-  color: #ccc !important;
+  color: #eee !important;
 }
-h1 {
-  background-image: url("navigators.jpg");
-  background-size: 100% auto;
-  font-size: 8vw;
-  background-position: center center;
-  background-repeat: no-repeat;
-  padding: 2em 0;
-  margin: 0 0 2vh 0;
-  text-align: center;
+section {
+  padding: 1em 1em;
+}
+.navigators {
+  width: 20em;
+  padding: .5em;
 }
 #mapdiv {
   margin: 2vh 0;
   height: 50vh;
 }
-.bigimg {
-  margin: .5em 0;
-  width: 95vw;
+#mapdiv a, map-view a {
+  color: black !important;
+  text-decoration: none;
 }
 </style>
-<script type="module" src="cybervalley-map.js"></script>
-
 </head>
 <body>
-<h1>CyberValley, Japan</h1>
-<div>サイバーナビゲーター：<a href=https://twitter.com/kristopher>帝都久利須</a>、<a href=https://twitter.com/taisukef>福野泰介</a></div>
-<div>毎週金 14:00-15:00 at <a href="http://tannan.fm/">tannan.fm 79.1MHz or net</a></div>
-<br>
-毎月最終金曜夜は、CyberFriday （サイバーフライデー）<br>
-9/24(金) 18:30-21:30 at <a href=E9138732295336>コネクトフリー鯖江開発センター</a>(<a href="https://sabae.cc/">鯖江商工会議所、SCC)</a>隣<br>
-机を使った出展、プロジェクターによる発表も歓迎。<br>
-参加費：学生無料、社会人1,000円（展示者、初回の方は無料）
-<br><br>
-<div>2021-09-24 Cyber Friday #7</div>
-<div>2021-08-27 Cyber Friday #6 (<a href=https://fukuno.jig.jp/3320>report</a>)</div>
-<div>2021-07-30 Cyber Friday #5 (<a href=https://fukuno.jig.jp/3292>report</a>)</div>
-<div>2021-06-25 Cyber Friday #4 (<a href=https://fukuno.jig.jp/3257>report</a>)</div>
-<div>2021-05-28 Cyber Friday #3 (<a href=https://fukuno.jig.jp/3229>report</a>)</div>
-<div>2021-03-26 Cyber Friday #2 (<a href=https://fukuno.jig.jp/3166>report</a>)</div>
-<div>2021-02-26 Cyber Friday #1</div>
-<div>2021-01-31 edu project started with <a href=https://afrel.co.jp/>Afrel</a>, <a href=https://na-s.jp/>na-s.jp</a>, <a href=https://ict4e.jp/>ict4e</a>!</div>
-<div>2021-01-28 <a href=https://fukuno.jig.jp/3109>gov project at Sabae</a> started!</div>
-<div>2020-12-04 started!</div>
+<p id="notSupportedDescription"></p>
+<canvas id="myCanvas"></canvas>
+<div class=text>
+<div id=text1 class=cyber>Cyber</div>
+<div id=text2 class=cyber>Friday</div>
+<div id=text3 class=cyber>2021-09-24 18:30-21:30</div>
+<div id=text4 class=cyber>@ConnectFree/Sabae/CyberValley</div>
+</div>
 
-<div id="mapdiv"></div>
+<main>
+  <section>
+  <h1>CyberValley, Japan</h1>
+  <img class=navigators src="navigators.jpg">
+    <div>サイバーナビゲーター：<a href=https://twitter.com/kristopher>帝都久利須</a>、<a href=https://twitter.com/taisukef>福野泰介</a></div>
+  <div>毎週金 14:00-15:00 at <a href="http://tannan.fm/">tannan.fm 79.1MHz or net</a></div>
+  </section>
 
-<hr>
-<a href=https://github.com/code4fukui/cybervalley>src of this web on GitHub</a>
+  <section>
+  毎月最終金曜夜は、CyberFriday （サイバーフライデー）<br>
+  9/24(金) 18:30-21:30 at <a href=E9138732295336>コネクトフリー鯖江開発センター</a>(<a href="https://sabae.cc/">鯖江商工会議所、SCC)</a>隣<br>
+  机を使った出展、プロジェクターによる発表も歓迎。<br>
+  参加費：学生無料、社会人1,000円（展示者、初回の方は無料）
+  </section>
+
+  <section>
+    <script type="module" src="https://code4fukui.github.io/map-view/map-view.js"></script>
+    <map-view name="会場：ConnectFree/Sabae" latlng="35.947436,136.183460" zoom="16"></map-view>
+  </section>
+
+  <section>
+  Cyber History<br>
+  <div>2021-09-24 Cyber Friday #7</div>
+  <div>2021-08-27 Cyber Friday #6 (<a href=https://fukuno.jig.jp/3320>report</a>)</div>
+  <div>2021-07-30 Cyber Friday #5 (<a href=https://fukuno.jig.jp/3292>report</a>)</div>
+  <div>2021-06-25 Cyber Friday #4 (<a href=https://fukuno.jig.jp/3257>report</a>)</div>
+  <div>2021-05-28 Cyber Friday #3 (<a href=https://fukuno.jig.jp/3229>report</a>)</div>
+  <div>2021-03-26 Cyber Friday #2 (<a href=https://fukuno.jig.jp/3166>report</a>)</div>
+  <div>2021-02-26 Cyber Friday #1</div>
+  <div>2021-01-31 edu project started with <a href=https://afrel.co.jp/>Afrel</a>, <a href=https://na-s.jp/>na-s.jp</a>, <a href=https://ict4e.jp/>ict4e</a>!</div>
+  <div>2021-01-28 <a href=https://fukuno.jig.jp/3109>gov project at Sabae</a> started!</div>
+  <div>2020-12-04 started!</div>
+  </section>
+
+  <section>
+    Cyber Map<br>
+    <script type="module" src="./cybervalley-map.js"></script>
+    <div id="mapdiv"></div>
+  </section>
+
+  <section>
+    Cyber Source<br>
+    <a href=https://github.com/code4fukui/cybervalley>src of this web on GitHub</a>
+  </section>
+</main>
+
 </body>
-<html>
+</html>
