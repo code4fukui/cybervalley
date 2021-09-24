@@ -145,14 +145,26 @@ section {
 <script src="js/stats.js"></script>
 <script src="js/script.js"></script>
 <p id="notSupportedDescription"></p>
-<canvas id="myCanvas"></canvas>
-<div class=text>
-<div id=text1 class=cyber>Cyber</div>
-<div id=text2 class=cyber>Friday</div>
-<div id=text3 class=cyber>2021-09-24 18:30-21:30</div>
-<div id=text4 class=cyber>@ConnectFree/Sabae/CyberValley</div>
+<div id="title">
+  <canvas id="myCanvas"></canvas>
+  <div class=text>
+  <div id=text1 class=cyber>Cyber</div>
+  <div id=text2 class=cyber>Friday</div>
+  <div id=text3 class=cyber>2021-09-24 18:30-21:30</div>
+  <div id=text4 class=cyber>@ConnectFree/Sabae/CyberValley</div>
+  </div>
 </div>
+<script type="module">
+import { toggleFullscreen } from "https://js.sabae.cc/toggleFullscreen.js";
 
+title.onclick = () => toggleFullscreen(title);
+/*
+document.onfullscreenchange = (e) => {
+  if (!document.fullscreenElement) {
+  }
+};
+*/
+</script>
 <main>
   <h1 style="display:none">CyberFriday - CyberValley, Japan</h1>
 
