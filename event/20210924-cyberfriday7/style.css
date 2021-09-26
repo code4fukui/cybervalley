@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+img {
+  margin: 10px;
+  height: 30vh;
+}
+a {
+  color: #f8f8f8 !important;
+}
