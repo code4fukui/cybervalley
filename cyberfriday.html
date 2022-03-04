@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#000">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image"  content="https://cybervalley.jp/cybervalley.jpg">
-<meta name="twitter:image" content="https://cybervalley.jp/cybervalley.jpg">
-<meta property="og:title" content="CyberValley, Japan / サイバーバレー">
-<title>CyberValley, Japan / サイバーバレー</title>
+<meta property="og:image"  content="https://cybervalley.jp/cyberfriday.jpg">
+<meta name="twitter:image" content="https://cybervalley.jp/cyberfriday.jpg">
+<meta property="og:title" content="CyberFriday / サイバーフライデー - CyberValley, Japan">
+<title>CyberFriday / サイバーフライデー</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&display=swap" rel="stylesheet">
@@ -147,17 +147,17 @@ section {
 <p id="notSupportedDescription"></p>
 <div id="title">
   <canvas id="myCanvas"></canvas>
-  <div class=text id=cybervalley>
+  <div class=text id=cybervalley style="display:none">
   <div id=text1 class=cyber>Cyber</div>
   <div id=text2 class=cyber>Valley</div>
   <div id=text3 class=cyber>Thu 11:30-12:30</div>
   <div id=text4 class=cyber>at tannan.fm or 79.1MHz in Tannan area</div>
   </div>
-  <div class=text id=cyberfriday style="display:none">
+  <div class=text id=cyberfriday>
     <div id=text1 class=cyber>Cyber</div>
     <div id=text2 class=cyber>Friday</div>
     <div id=text3 class=cyber>2022-03-25 18:30-22:00</div>
-    <div id=text4 class=cyber>@ConnectFree/Sabae/CyberValley</div>
+    <div id=text4 class=cyber>@connectFree/Sabae/CyberValley</div>
   </div>
 </div>
 </div>
@@ -167,31 +167,20 @@ title.onclick = (e) => document.fullscreenElement || title.requestFullscreen();
 </script>
 
 <main>
-  <h1 x-style="display:none">CyberValley, Japan</h1>
+  <h1>CyberFriday - CyberValley, Japan</h1>
 
-
-    <section>
-      <h2>CyberValley, Japan</h2>
-      <img class=navigators src="navigators.jpg">
-      <div>サイバーナビゲーター：<a href=https://twitter.com/kristopher>帝都久利寿</a>、<a href=https://twitter.com/taisukef>福野泰介</a></div>
-      <div>ラジオ番組 毎週木 11:30-12:30 <a href="http://tannan.fm/">tannan.fm or 79.1MHz@sabae</a></div>
-    </section>
-
-    <section>
-      <h2><a href=cyberfriday.html>CyberFriday</a></h2>
+  <section>
     毎月最終金曜夜は、CyberFriday （サイバーフライデー）<br>
     2022/3/25(金) 18:30-22:00 at <a href=E9138732295336>コネクトフリー鯖江開発センター</a> (<a href="https://sabae.cc/">鯖江商工会議所、SCC</a>隣)<br>
     時間内出入り自由、出展、発表、大歓迎<br>
     参加費：学生無料、社会人1,000円（展示者、初回の方は無料）<br>
     主催：<a href=https://connectfree.co.jp/corp/>connectFree</a>、<a href=https://jig.jp/>jig.jp</a>、<a href=https://code4fukui.github.io/>Code for FUKUI</a><br>
-    </section>
-
+  </section>
 
   <section>
     <script type="module" src="https://code4fukui.github.io/map-view/map-view.js"></script>
-    <map-view name="会場：ConnectFree/Sabae" latlng="35.947436,136.183460" zoom="16"></map-view>
+    <map-view name="会場：connectFree/Sabae" latlng="35.947436,136.183460" zoom="16"></map-view>
   </section>
-
 
   <section>
   <h2>CyberHistory</h2>
@@ -211,22 +200,6 @@ title.onclick = (e) => document.fullscreenElement || title.requestFullscreen();
   <div>2021-01-31 edu project started with <a href=https://afrel.co.jp/>Afrel</a>, <a href=https://na-s.jp/>na-s.jp</a>, <a href=https://ict4e.jp/>ict4e</a>!</div>
   <div>2021-01-28 <a href=https://fukuno.jig.jp/3109>gov project at Sabae</a> started!</div>
   <div>2020-12-04 started!</div>
-  </section>
-
-  <!--
-  <section>
-    <h2>CyberEvent</h2>
-    <a href=https://www.sg.kyoto-u.ac.jp/sg/events/5164/>シンポジウム 「脱ハンコ」と サイバー時代の個人認証 | EVENTS | 京都大学公共政策大学院<br>
-    <img src="img/hanko1.jpg" class=hanko><br>
-    <img src="img/hanko2.jpg" class=hanko><br>
-   </a>
-  </section>
-  -->
-
-  <section>
-    <h2>CyberMap</h2>
-    <script type="module" src="./cybervalley-map.js"></script>
-    <div id="mapdiv"></div>
   </section>
 
   <section>
