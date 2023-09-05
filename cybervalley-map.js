@@ -20,6 +20,7 @@ window.onload = async () => {
     { lat: 36.0533175, lng: 136.2496007, name: "株式会社アフレル", link: "https://afrel.co.jp/" },
     { lat: 36.0545894, lng: 136.2458145, name: "株式会社ナチュラルスタイル", link: "https://na-s.jp/" },
     { lat: 36.0604534, lng: 136.2198314, name: "株式会社ict4e", link: "https://ict4e.jp/" },
+    { lat: 35.901019, lng: 136.166494, name: "IdeaSync", link: "https://sync.icraftlab.jp/" },
   ];
 
   const map = L.map('mapdiv')
