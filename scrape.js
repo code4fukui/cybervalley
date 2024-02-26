@@ -2,7 +2,7 @@
 import { HTMLParser } from "https://js.sabae.cc/HTMLParser.js";
 //import { Day } from "https://js.sabae.cc/DateTime.js";
 import { CSV } from "https://js.sabae.cc/CSV.js";
-//import { ICAL } from "https://code4fukui.github.io/ICAL/ICAL.js";
+import { ICAL } from "https://code4fukui.github.io/ICAL/ICAL.js";
 
 const dom2text = (dom) => {
   const ss = [];
@@ -45,4 +45,4 @@ for (const item of items) {
 }
 console.log(list);
 await Deno.writeTextFile("cyberfriday.csv", CSV.stringify(list));
-//await Deno.writeTextFile("cyberfriday.ics", ICAL.stringigfy(list));
+await Deno.writeTextFile("cyberfriday.ics", ICAL.stringify(list));
