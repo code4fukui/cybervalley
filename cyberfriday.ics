@@ -2,11 +2,18 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:https://github.com/code4fukui/ICAL.js
 BEGIN:VEVENT
+DTSTART:20240726T100000Z
+DTEND:20240726T130000Z
+SUMMARY:CyberFriday #37
+LOCATION: https://afrel.co.jp/company/profile Afrel/Fukui city
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
 DTSTART:20240628T100000Z
 DTEND:20240628T130000Z
 SUMMARY:CyberFriday #36
-LOCATION:a.cafe https://www.a.cafe.adot-department-store.com/pages/a-cafe /Echizen city)
-DESCRIPTION:
+LOCATION:a.cafe https://www.a.cafe.adot-department-store.com/pages/a-cafe /Echizen city
+DESCRIPTION:report https://fukuno.jig.jp/4356
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20240524T100000Z
