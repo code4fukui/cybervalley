@@ -2,11 +2,18 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:https://github.com/code4fukui/ICAL.js
 BEGIN:VEVENT
+DTSTART:20240823T100000Z
+DTEND:20240823T130000Z
+SUMMARY:CyberFriday #38
+LOCATION:jig.jp https://www.jig.jp/about#profile /Sabae city
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
 DTSTART:20240726T100000Z
 DTEND:20240726T130000Z
 SUMMARY:CyberFriday #37
-LOCATION: https://afrel.co.jp/company/profile Afrel/Fukui city
-DESCRIPTION:
+LOCATION: https://afrel.co.jp/activity/cyberfriday Afrel/Fukui city
+DESCRIPTION:report https://fukuno.jig.jp/4384
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20240628T100000Z
