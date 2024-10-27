@@ -1,19 +1,26 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:https://github.com/code4fukui/ICAL.js
+PRODID:https://github.com/code4fukui/ICAL/
+BEGIN:VEVENT
+DTSTART:20241129T100000Z
+DTEND:20241129T130000Z
+SUMMARY:CyberFriday #41
+LOCATION: https://yoriver.jp YORIVER/Fukui
+DESCRIPTION:
+END:VEVENT
 BEGIN:VEVENT
 DTSTART:20241025T100000Z
 DTEND:20241025T130000Z
 SUMMARY:CyberFriday #40
 LOCATION:jig.jp https://www.jig.jp/about#profile /Sabae city
-DESCRIPTION:
+DESCRIPTION:report https://fukuno.jig.jp/4475
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20240920T100000Z
 DTEND:20240920T130000Z
 SUMMARY:CyberFriday #39
 LOCATION: https://fwi.fukui.jp FWI Studio/Fukui
-DESCRIPTION:press https://page.fwi.fukui.jp/events/2921
+DESCRIPTION:press https://page.fwi.fukui.jp/events/2921 ,  report https://fukuno.jig.jp/4440
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20240823T100000Z
