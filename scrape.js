@@ -38,8 +38,8 @@ for (const item of items) {
   const location = na < 0 ? "" : name0.substring(na + 4);
   const name = na < 0 ? name0 : name0.substring(0, na);
   const description = n < 0 ? "" : txt.substring(n + 2, txt.length - 1).trim();
-  const dtstart = day + "T19:00+09:00";
-  const dtend = day + (name.indexOf("#41") >= 0 ? "T21:30+09:00" : "T22:00+09:00");
+  const dtstart = day + (name.indexOf("#44") >= 0 ? "T18:00+09:00" : "T19:00+09:00");
+  const dtend = day + (name.indexOf("#41") >= 0 || name.indexOf("#44") >= 0 ? "T21:30+09:00" : "T22:00+09:00");
 
   list.push({ DTSTART: dtstart, DTEND: dtend, SUMMARY: name, LOCATION: location, DESCRIPTION: description });
 }
