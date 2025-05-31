@@ -2,11 +2,18 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:https://github.com/code4fukui/ICAL/
 BEGIN:VEVENT
+DTSTART:20250627T100000Z
+DTEND:20250627T130000Z
+SUMMARY:CyberFriday #47
+LOCATION: https://www.fisc.jp/offering/consult/2025/04/171849 福井県産業支援センター2F 共創スペース/Fukui city
+DESCRIPTION:report https://fukuno.jig.jp/4692
+END:VEVENT
+BEGIN:VEVENT
 DTSTART:20250530T100000Z
 DTEND:20250530T130000Z
 SUMMARY:CyberFriday #46
 LOCATION:jig.jp https://www.jig.jp/about#profile /Sabae city feat.  https://www.l-community.com/forum 電脳メガネサミット
-DESCRIPTION:
+DESCRIPTION:report https://fukuno.jig.jp/4692
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20250425T100000Z
