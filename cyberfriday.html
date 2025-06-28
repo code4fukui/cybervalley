@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
 <meta name="theme-color" content="#000">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image"  content="https://cybervalley.jp/cyberfriday.jpg">
@@ -79,6 +79,12 @@ canvas {
   top: 23vw;
   left: 21vw;
 }
+#btnbgm {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  padding: .3em 1em;
+}
 @media (max-width:500px) {
   #text1 {
     top: 14vw;
@@ -150,22 +156,80 @@ section {
   <div class=text id=cyberfriday>
     <div id=text1 class=cyber>Cyber</div>
     <div id=text2 class=cyber>Friday</div>
-    <div id=text3 class=cyber>2025-06-27</div>
-    <div id=text4 class=cyber>@福井県産業支援センター/Fukui-city/CyberValley</div>
+    <div id=text3 class=cyber>2025-07-25</div>
+    <div id=text4 class=cyber>@未定/CyberValley</div>
   </div>
 </div>
 </div>
 
 <script type="module">
+import { shuffle } from "https://js.sabae.cc/shuffle.js";
+
 title.onclick = (e) => document.fullscreenElement || title.requestFullscreen();
+
+const bgms = [
+  "./bgm/cyberfriday-song.mp3", // 日本語
+  "./bgm/cyberfirday-night.mp3", // 英語
+  "./bgm/cyberfriday-eurobeat.mp3", // インスト
+];
+//shuffle(bgms);
+
+const caches = {};
+let currentaudio = null;
+const getAudio = (fn) => {
+  const cache = caches[fn];
+  if (cache) return cache;
+  const audio = new Audio();
+  audio.src = fn;
+  return audio;
+};
+const waitForAudioEnd = async (audioElement) => {
+  return new Promise((resolve, reject) => {
+    if (audioElement.ended) {
+      resolve();
+      return;
+    }
+    audioElement.addEventListener('ended', resolve, { once: true });
+    audioElement.addEventListener('error', reject, { once: true });
+  });
+};
+const playBGM = async (audio) => {
+  audio.currentTime = 0;
+  audio.play();
+  currentaudio = audio;
+  await waitForAudioEnd(audio);
+};
+const stopBGM = () => {
+  currentaudio.pause();
+  currentaudio = null;
+};
+
+let idx = 0;
+const playBGMs = async (bgms) => {
+  if (currentaudio) {
+    stopBGM();
+    return;
+  }
+  for (;;) {
+    const bgm = bgms[idx++ % bgms.length];
+    const audio = getAudio(bgm);
+    await playBGM(audio);
+    if (!currentaudio) break;
+  }
+};
+
+btnbgm.onclick = () => playBGMs(bgms);
+
 </script>
 
 <main>
   <h1>CyberFriday - CyberValley, Japan</h1>
 
+<button id=btnbgm>BGM by AI</button>
+
   <section>
     最終金曜夜は、CyberFriday （サイフラ、サイバーフライデー）<br>
-    19:00-21:30 展示、見学、交流、発表 (発表 19:30-)<br>
+    19:00-21:30 展示、見学、交流、発表 (発表 20:00-)<br>
     <!--
     同時開催の<a href=https://www.instagram.com/comicalyouth/>こみかる</a>は、17:30-スタート。<br>
     19:00-22:00 展示、見学、交流、発表 (発表 20:00-)<br>
@@ -178,8 +242,10 @@ title.onclick = (e) => document.fullscreenElement || title.requestFullscreen();
     参加費：学生無料、社会人1,000円（展示者、発表者、初回の方は無料）<br>
     会場: <a href=https://geo3x3.com/#E9138739216687>ショッピングセンターエルパ、2Fフードコート</a><br>
     会場: <a href=https://geo3x3.com/#E9138732358822>jig.jp本店＆開発センター</a><br>
-    -->
     会場: <a href=https://geo3x3.com/#E9138739372287>福井県産業支援センター2F 共創スペース</a><br>
+    -->
+    会場: 未定<br>
+
     <!--
     会場: <a href=https://geo3x3.com/#E913873647982684>FWI Studio (福井市中央1-3-1 加藤ビル5階 / 福井駅から徒歩3分 / 20時以降は要連絡)</a><br>
     -->
@@ -204,9 +270,9 @@ title.onclick = (e) => document.fullscreenElement || title.requestFullscreen();
   </section>
 
   <section>
+    <!--
     <script type="module" src="https://code4fukui.github.io/map-view/map-view.js"></script>
     <map-view name="会場：福井県産業支援センター/Fukui" geo3x3="E9138739372287" zoom="16"></map-view>
-    <!--
     <map-view name="会場：エルパ/Fukui" geo3x3="E9138739216687" zoom="16"></map-view>
     <map-view name="会場：jig.jp/Sabae" geo3x3="E9138732358822" zoom="16"></map-view>
     <map-view name="会場：YORIVER/Fukui" geo3x3="E9138736475797251" zoom="16"></map-view>
@@ -223,7 +289,8 @@ title.onclick = (e) => document.fullscreenElement || title.requestFullscreen();
   <section>
   <h2>CyberFriday Calendar (<a href=./cyberfriday.ics>iCal</a>/<a href=./cyberfriday.csv>CSV</a>)</h2>
   <div id=cybercalendar>
-  <div>2025-06-27 CyberFriday #47 at <a href=https://www.fisc.jp/offering/consult/2025/04/171849/>福井県産業支援センター2F 共創スペース</a>/Fukui city (<a href=https://fukuno.jig.jp/4692>report</a>)</div>
+  <div>2025-07-25 CyberFriday #48 at 未定</div>
+  <div>2025-06-27 CyberFriday #47 at <a href=https://www.fisc.jp/offering/consult/2025/04/171849/>福井県産業支援センター2F 共創スペース</a>/Fukui city (<a href=https://fukuno.jig.jp/4720>report</a>)</div>
   <div>2025-05-30 CyberFriday #46 at <a href=https://www.jig.jp/about#profile>jig.jp</a>/Sabae city feat. <a href=https://www.l-community.com/forum/>電脳メガネサミット</a> (<a href=https://fukuno.jig.jp/4692>report</a>)</div>
   <div>2025-04-25 CyberFriday #45 at <a href=https://www.jig.jp/about#profile>jig.jp</a>/Sabae city (<a href=https://fukuno.jig.jp/4657>report</a>)</div>
   <div>2025-03-28 CyberFriday #44 at <a href=https://lp-lpa.co.jp/>エルパ</a>/Fukui city feat. <a href=https://www.instagram.com/comicalyouth/>こみかる</a> (<a href=https://fukuno.jig.jp/4629>report</a>)</div>
