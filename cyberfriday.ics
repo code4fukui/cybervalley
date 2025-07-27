@@ -2,11 +2,18 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:https://github.com/code4fukui/ICAL/
 BEGIN:VEVENT
+DTSTART:20250822T100000Z
+DTEND:20250822T130000Z
+SUMMARY:CyberFriday #49
+LOCATION:jig.jp https://www.jig.jp/about#profile /Sabae city
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
 DTSTART:20250725T100000Z
 DTEND:20250725T130000Z
 SUMMARY:CyberFriday #48
 LOCATION:大野市 結とぴあ 3F 305/306 https://www.city.ono.fukui.jp/shisei/sonota/yuitopiariyou.html /Ono city feat. 血糖変動に向き合う2週間 https://www.pref.fukui.lg.jp/doc/sinsan/sougyousinnsanngyousousyutugur/sennsinngijutu.html 
-DESCRIPTION:
+DESCRIPTION:report https://fukuno.jig.jp/4748
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20250627T100000Z
