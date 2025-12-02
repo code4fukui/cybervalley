@@ -5,7 +5,7 @@ BEGIN:VEVENT
 DTSTART:20251223T100000Z
 DTEND:20251223T130000Z
 SUMMARY:CyberFriday #53
-LOCATION:jig.jp https://www.jig.jp/about#profile /Sabae city
+LOCATION: https://www.fukui-nct.ac.jp 福井高専コミュニティルーム/Sabae city
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
