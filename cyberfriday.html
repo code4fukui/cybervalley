@@ -148,8 +148,6 @@ section {
 </style>
 </head>
 <body>
-<script src="js/stats.js"></script>
-<script src="js/script.js"></script>
 <p id="notSupportedDescription"></p>
 <div id="title">
   <canvas id="myCanvas"></canvas>
@@ -164,6 +162,9 @@ section {
 
 <script type="module">
 import { shuffle } from "https://js.sabae.cc/shuffle.js";
+import { setGalaxy } from "./setGalaxy.js";
+
+setGalaxy(myCanvas);
 
 title.onclick = (e) => document.fullscreenElement || title.requestFullscreen();
 
