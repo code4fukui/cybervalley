@@ -1,5 +1,7 @@
 # cybervalley
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 One-sentence description: cybervalley is a Japanese open source project that provides tools and resources related to the CyberValley initiative in Fukui, Japan.
 
 ## Features
