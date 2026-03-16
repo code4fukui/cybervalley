@@ -1,6 +1,6 @@
 # CyberValley
 
-サイバーセキュリティやIoTをはじめとする先端技術に関する交流・活動を行う地域コミュニティ「CyberValley, Japan」のリポジトリです。
+CyberValley, Japanは、サイバーセキュリティやIoTをはじめとする先端技術に関する交流・活動を行う地域コミュニティです。
 
 ## 機能
 - CyberFridayの開催
@@ -8,7 +8,7 @@
 - 最新技術情報の共有
 
 ## 必要環境
-特になし
+特にありません。
 
 ## データ・API
 - [code4fukui/cyber-background](https://github.com/code4fukui/cyber-background)

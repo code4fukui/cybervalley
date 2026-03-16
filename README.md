@@ -27,4 +27,4 @@ The project utilizes the following external resources:
 - `https://code4fukui.github.io/ICAL/ICAL.js`
 
 ## License
-This project is licensed under the MIT License.
+MIT License — see [LICENSE](LICENSE).
