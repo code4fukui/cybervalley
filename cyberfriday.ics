@@ -2,11 +2,18 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:https://github.com/code4fukui/ICAL/
 BEGIN:VEVENT
+DTSTART:20260529T100000Z
+DTEND:20260529T130000Z
+SUMMARY:CyberFriday #58
+LOCATION:jig.jp https://www.jig.jp/about#profile /Sabae city feat.  https://www.l-community.com/forum 電脳メガネサミット2026
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
 DTSTART:20260424T100000Z
 DTEND:20260424T130000Z
 SUMMARY:CyberFriday #57
 LOCATION:jig.jp https://www.jig.jp/about#profile /Sabae city
-DESCRIPTION:
+DESCRIPTION:report https://fukuno.jig.jp/5021
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20260313T100000Z
@@ -54,7 +61,7 @@ BEGIN:VEVENT
 DTSTART:20250926T100000Z
 DTEND:20250926T130000Z
 SUMMARY:CyberFriday #50
-LOCATION: https://lp-lpa.co.jp エルパ/Fukui city feat.  https://nt-fukui.jp NTふくい前夜祭、 https://www.fisc.jp/kumadigifes クマンドウデジタルアライブも同日開催
+LOCATION: https://lp-lpa.co.jp エルパ/Fukui city feat.  https://nt-fukui.jp NTふくい前夜祭、 https://www.fisc.jp/kumadigifes クマンドウデジタルアライブ
 DESCRIPTION:report https://fukuno.jig.jp/4811
 END:VEVENT
 BEGIN:VEVENT
