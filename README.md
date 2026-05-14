@@ -58,7 +58,7 @@ The project utilizes several external resources and data sources:
     -   `https://js.sabae.cc/HTMLParser.js`
     -   `https://js.sabae.cc/DateTime.js`
     -   `https://js.sabae.cc/CSV.js`
-    -   `https://code4fukui.github.io/ICAL/ICAL.js`
+    -   `~~https://code4fukui.github.io/ICAL/ICAL.js`~~ *(unavailable)*
 
 ## 📜 License
 
