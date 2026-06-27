@@ -2,18 +2,25 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:https://github.com/code4fukui/ICAL/
 BEGIN:VEVENT
+DTSTART:20260724T100000Z
+DTEND:20260724T130000Z
+SUMMARY:CyberFriday #60
+LOCATION:jig.jp https://www.jig.jp/about#profile /Sabae city
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
 DTSTART:20260626T100000Z
 DTEND:20260626T130000Z
 SUMMARY:CyberFriday #59
 LOCATION: https://sabae.cc SCC(鯖江商工会議所)/Sabae city
-DESCRIPTION:
+DESCRIPTION:report https://fukuno.jig.jp/5084
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20260529T100000Z
 DTEND:20260529T130000Z
 SUMMARY:CyberFriday #58
 LOCATION:jig.jp https://www.jig.jp/about#profile /Sabae city feat.  https://www.l-community.com/forum 電脳メガネサミット2026
-DESCRIPTION:
+DESCRIPTION:report https://fukuno.jig.jp/5056
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20260424T100000Z
